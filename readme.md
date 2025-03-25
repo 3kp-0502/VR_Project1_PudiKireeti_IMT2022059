@@ -240,6 +240,7 @@ best.
 | KNN                                           | 73.37%    |
 | Decision Tree                                 | 65.64%    |
 
+![WhatsApp Image 2025-03-25 at 19 32 34_1a777c10](https://github.com/user-attachments/assets/b9ce1c3c-cf80-4da6-b407-494087d6a527)
 
 **Key Observations**
 
@@ -385,6 +386,11 @@ techniques:
 -   **Edge Detection Result**
 
 -   **U-Net Segmentation Result**
+
+![WhatsApp Image 2025-03-24 at 22 56 17_a8d7ac46](https://github.com/user-attachments/assets/f3900fea-0a9b-4d9a-a11e-d73c09819d64)
+![WhatsApp Image 2025-03-24 at 22 58 03_2c4eff83](https://github.com/user-attachments/assets/52f51e45-fca7-4a3f-bbc5-1a582ce8abf4)
+![WhatsApp Image 2025-03-24 at 22 58 20_cb069c98](https://github.com/user-attachments/assets/af7228aa-53a5-40e7-a606-10b88c47ce85)
+
 
 Performance metrics were computed for each method, demonstrating that
 **U-Net outperformed traditional techniques** in mask segmentation. The
@@ -634,6 +640,8 @@ approaches, including U-Net, thresholding, and edge detection.
 | **U-Net**     | **0.7021** | **0.8913**  | **0.5929**  |
 | Thresholding  | 0.3002   | 0.4593    | 0.3079      |
 | Edge Detection | 0.1205   | 0.2343    | 0.5479      |
+
+![WhatsApp Image 2025-03-24 at 22 56 30_6811343f](https://github.com/user-attachments/assets/3ad1f851-1528-44a4-977f-6f2e22c164b1)
 
 
 **Observations:**
