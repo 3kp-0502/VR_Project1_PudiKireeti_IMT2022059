@@ -68,6 +68,8 @@ These datasets serve as the foundation for training and evaluating both
 traditional machine learning and deep learning models for face mask
 classification and segmentation.
 
+***
+
 ***Methodology:***
 
 ***Classification:***
@@ -138,6 +140,8 @@ descriptors.
 After feature extraction, **Principal Component Analysis (PCA)** was
 applied to reduce dimensionality to **100 components**.
 
+***
+
 **2. Machine Learning Classifiers**
 
 The extracted features were used to train the following classifiers:
@@ -182,6 +186,8 @@ The extracted features were used to train the following classifiers:
 
 -   Achieved **73.37% accuracy**.
 
+***
+
 **3. CNN-Based Classification**
 
 To improve performance, we trained a **Convolutional Neural Network
@@ -221,6 +227,8 @@ We trained CNN with different settings:
 CNN with a **0.001 learning rate and ReLU activation** performed the
 best.
 
+***
+
 ## 4. Performance Comparison
 
 | Model                                          | Accuracy  |
@@ -257,6 +265,8 @@ best.
 8.  **Hyperparameter tuning (learning rate, activation function) plays a
     major role in CNN performance**.
 
+***
+
 ***Segmentation:***
 
 **Methodology**
@@ -284,6 +294,8 @@ preprocessed before segmentation. The preprocessing steps included:
 -   **RGB Conversion:** When required, grayscale images were stacked
     into three channels to match the input shape expected by U-Net.
 
+***
+
 **2. Region-Based Segmentation (Thresholding and Edge Detection)**
 
 Traditional segmentation techniques were applied to extract mask regions
@@ -304,6 +316,8 @@ from face images:
 
     -   Used threshold values of 100 and 200 for detecting strong and
         weak edges, respectively.
+
+***
 
 **3. U-Net Model for Mask Segmentation**
 
@@ -330,6 +344,8 @@ following architecture:
     -   A **1 × 1 Conv2D** layer with a **sigmoid** activation function
         was used to output a binary segmentation mask.
 
+***
+
 **4. Model Training and Evaluation**
 
 -   **Training:**
@@ -353,6 +369,8 @@ following architecture:
     -   **Accuracy:** Percentage of correctly classified pixels in the
         segmentation output.
 
+***
+
 **5. Visualization and Performance Comparison**
 
 The segmentation results were visualized and compared across different
@@ -373,6 +391,8 @@ Performance metrics were computed for each method, demonstrating that
 final comparison revealed that **U-Net achieved a higher IoU and Dice
 score** than thresholding and edge detection, validating its
 effectiveness for precise mask segmentation.
+
+***
 
 ***Hyperparameters and Experiments:***
 
@@ -435,16 +455,14 @@ hyperparameters were considered:
 
 **Experiments and Results**
 
-  -------------------------------------------------------------------------------------
-  **Experiment**   **Learning          **Activation**   **Optimizer**   **Accuracy
-                   Rate**                                               (%)**
-  ---------------- ---------------- -- ---------------- --------------- ---------------
-  **CNN-1**        0.001               ReLU             Adam            **90.92**
+  ## Experiment Results
 
-  **CNN-2**        0.01                ReLU             Adam            **55.58**
+| Experiment | Learning Rate | Activation | Optimizer | Accuracy (%) |
+|-----------|--------------|------------|-----------|--------------|
+| **CNN-1** | 0.001        | ReLU       | Adam      | **90.92**    |
+| **CNN-2** | 0.01         | ReLU       | Adam      | **55.58**    |
+| **CNN-3** | 0.001        | Sigmoid    | Adam      | **55.58**    |
 
-  **CNN-3**        0.001               Sigmoid          Adam            **55.58**
-  -------------------------------------------------------------------------------------
 
 **Observations**
 
@@ -459,6 +477,8 @@ hyperparameters were considered:
 
 4.  Hyperparameter tuning showed that **ReLU with Adam and a learning
     rate of 0.001 is optimal**.
+
+***
 
 **Hyperparameters and Experiments for U-Net Model**
 
@@ -499,18 +519,14 @@ hyperparameters were considered:
 
 **2. Experimentation and Results**
 
-  ---------------------------------------------------------------------------------------------
-  **Experiment**   **Learning   **Batch   **Epochs**   **IoU**      **Dice       **Accuracy**
-                   Rate**       Size**                              Score**      
-  ---------------- ------------ --------- ------------ ------------ ------------ --------------
-  **Base Model**   0.001        8         3            **0.7021**   **0.8913**   **0.5929**
+  ## Experiment Results
 
-  **Experiment 1** 0.0001       8         5            Slightly     Slightly     Similar
-                                                       lower        lower        
+| Experiment      | Learning Rate | Batch Size | Epochs | IoU       | Dice Score | Accuracy  |
+|---------------|--------------|-----------|--------|-----------|------------|-----------|
+| **Base Model**  | 0.001        | 8         | 3      | **0.7021** | **0.8913** | **0.5929** |
+| **Experiment 1**| 0.0001       | 8         | 5      | **0.6784** | **0.8725** | **0.5891** |
+| **Experiment 2**| 0.001        | 16        | 3      | **0.7053** | **0.8947** | **0.6012** |
 
-  **Experiment 2** 0.001        16        3            Similar      Similar      Slightly
-                                                                                 higher
-  ---------------------------------------------------------------------------------------------
 
 **Observations:**
 
@@ -540,16 +556,14 @@ Three variations of CNN models were tested by changing the **learning
 rate** and **activation function** while keeping the optimizer constant
 (**Adam**). The results are summarized in the table below:
 
-  ----------------------------------------------------------------------------------
-  **Experiment**   **Learning     **Activation         **Optimizer**   **Accuracy
-                   Rate**         Function**                           (%)**
-  ---------------- -------------- -------------------- --------------- -------------
-  **CNN-1**        0.001          ReLU                 Adam            **90.92**
+  ## Experiment Results
 
-  **CNN-2**        0.01           ReLU                 Adam            **55.58**
+| Experiment | Learning Rate | Activation Function | Optimizer | Accuracy (%) |
+|-----------|--------------|--------------------|-----------|--------------|
+| **CNN-1** | 0.001        | ReLU               | Adam      | **90.92**    |
+| **CNN-2** | 0.01         | ReLU               | Adam      | **55.58**    |
+| **CNN-3** | 0.001        | Sigmoid            | Adam      | **55.58**    |
 
-  **CNN-3**        0.001          Sigmoid              Adam            **55.58**
-  ----------------------------------------------------------------------------------
 
 **Observations**
 
@@ -569,19 +583,16 @@ rate** and **activation function** while keeping the optimizer constant
 We also evaluated traditional machine learning models for comparison.
 The results are as follows:
 
-  -----------------------------------------------------------------------
-  **Model**                                   **Accuracy (%)**
-  ------------------------------------------- ---------------------------
-  **SVM**                                     **75.58%**
+  ## Model Performance Comparison
 
-  **KNN**                                     73.37%
+| Model            | Accuracy (%) |
+|-----------------|--------------|
+| **SVM**         | **75.58%**    |
+| KNN            | 73.37%        |
+| Decision Tree  | 65.64%        |
+| **MLP** (Neural Network) | **83.19%**    |
+| Random Forest  | 79.88%        |
 
-  **Decision Tree**                           65.64%
-
-  **MLP** (Neural Network)                    **83.19%**
-
-  **Random Forest**                           79.88%
-  -----------------------------------------------------------------------
 
 **Observations**
 
@@ -616,15 +627,14 @@ The results are as follows:
 The following table presents the evaluation metrics for different
 approaches, including U-Net, thresholding, and edge detection.
 
-  ------------------------------------------------------------------------
-  **Approach**          **Mean IoU**  **Mean Dice**  **Mean Accuracy**
-  --------------------- ------------- -------------- ---------------------
-  **U-Net**             **0.7021**    **0.8913**     **0.5929**
+  ## Approach Performance Comparison
 
-  **Thresholding**      0.3002        0.4593         0.3079
+| Approach        | Mean IoU  | Mean Dice | Mean Accuracy |
+|---------------|----------|-----------|--------------|
+| **U-Net**     | **0.7021** | **0.8913**  | **0.5929**  |
+| Thresholding  | 0.3002   | 0.4593    | 0.3079      |
+| Edge Detection | 0.1205   | 0.2343    | 0.5479      |
 
-  **Edge Detection**    0.1205        0.2343         0.5479
-  ------------------------------------------------------------------------
 
 **Observations:**
 
