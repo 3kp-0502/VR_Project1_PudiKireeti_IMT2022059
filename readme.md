@@ -29,6 +29,8 @@ This combination of techniques allows for a comprehensive evaluation of
 different approaches in mask classification and segmentation, providing
 insights into the strengths of traditional vs. deep learning methods.
 
+***
+
 ***Dataset:***
 
 This project utilizes two datasets for face mask classification and
