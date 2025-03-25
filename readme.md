@@ -1,5 +1,7 @@
 **Face Mask Detection, Classification, and Segmentation**
 
+***
+
 ***Introduction:***
 
 This project aims to develop a computer vision solution for detecting
