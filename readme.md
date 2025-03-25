@@ -217,23 +217,17 @@ We trained CNN with different settings:
 CNN with a **0.001 learning rate and ReLU activation** performed the
 best.
 
-4.  **Performance Comparison**
+## 4. Performance Comparison
 
-  -----------------------------------------------------------------------
-  **Model**                                        **Accuracy**
-  ------------------------------------------------ ----------------------
-  CNN (LR=0.001, ReLU)                             **90.92%**
+| Model                                          | Accuracy  |
+|-----------------------------------------------|-----------|
+| **CNN (LR=0.001, ReLU)**                      | **90.92%** |
+| MLP                                           | 83.19%    |
+| Random Forest                                 | 79.88%    |
+| SVM                                           | 75.58%    |
+| KNN                                           | 73.37%    |
+| Decision Tree                                 | 65.64%    |
 
-  MLP                                              **83.19%**
-
-  Random Forest                                    79.88%
-
-  SVM                                              75.58%
-
-  KNN                                              73.37%
-
-  Decision Tree                                    65.64%
-  -----------------------------------------------------------------------
 
 **Key Observations**
 
