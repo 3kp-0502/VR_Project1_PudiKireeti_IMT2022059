@@ -459,7 +459,7 @@ hyperparameters were considered:
 -   **Fixed at 5** (due to time constraints, but typically a higher
     value is better)
 
-**Experiments and Results**
+***
 
   ## Experiment Results
 
@@ -523,6 +523,8 @@ hyperparameters were considered:
 
 -   **Padding: \"same\" for all convolutional layers**
 
+***
+
 **2. Experimentation and Results**
 
   ## Experiment Results
@@ -544,6 +546,8 @@ hyperparameters were considered:
 
 -   Increasing batch size to 16 resulted in a small accuracy gain but no
     major IoU/Dice improvement.
+
+***
 
 ***Results:***
 
@@ -626,6 +630,8 @@ The results are as follows:
 -   **ReLU activation is better than Sigmoid** in this case, as Sigmoid
     led to reduced performance.
 
+***
+
 ***Segmentation:***
 
 **Evaluation Metrics Comparison**
@@ -657,6 +663,8 @@ approaches, including U-Net, thresholding, and edge detection.
     accuracy (0.5479) was closer to U-Net than thresholding, likely due
     to correct edge identification in some cases.
 
+***
+
 ***Observations and Analysis:***
 
 The results indicate that deep learning approaches, particularly CNNs
@@ -678,6 +686,8 @@ In summary:
 These insights underline the importance of selecting appropriate models
 and tuning hyperparameters carefully to achieve optimal results in
 machine learning applications.
+
+***
 
 **Challenges Faced & How They Were Addressed**
 
@@ -711,6 +721,8 @@ machine learning applications.
 
 -   **Solution:** We experimented with **Canny edge detection and Sobel
     filtering but found U-Net to be the best alternative**.
+
+***
 
 ***How to Run the Code:***
 
@@ -805,3 +817,5 @@ python segmentation.py
 
     -   For segmentation, review printed axon details and check the
         output folder for processed images.
+
+***
